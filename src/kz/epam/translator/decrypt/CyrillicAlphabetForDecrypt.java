@@ -1,6 +1,6 @@
-package decrypt;
+package kz.epam.translator.decrypt;
 
-import choice.Choice;
+import kz.epam.translator.choice.Choice;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -37,7 +37,7 @@ public class CyrillicAlphabetForDecrypt {
 
     public void fileReadFromFolder(){
         try {
-            String text = Files.readString(Paths.get("C://Users//ergaz//IdeaProjects//Translator//src//text//CyrillicTextInMorze.txt"));
+            String text = Files.readString(Paths.get("C://Users//ergaz//IdeaProjects//Translator//src//kz//epam//translator//text//CyrillicTextInMorze.txt"));
             System.out.println(text);
             decryptionFromMorzeToCyrillic(text);
         } catch (IOException e) {

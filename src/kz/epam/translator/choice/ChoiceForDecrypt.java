@@ -1,7 +1,7 @@
-package choice;
+package kz.epam.translator.choice;
 
-import decrypt.CyrillicAlphabetForDecrypt;
-import decrypt.RomanAlphabetForDecrypt;
+import kz.epam.translator.decrypt.CyrillicAlphabetForDecrypt;
+import kz.epam.translator.decrypt.RomanAlphabetForDecrypt;
 
 import java.util.Scanner;
 

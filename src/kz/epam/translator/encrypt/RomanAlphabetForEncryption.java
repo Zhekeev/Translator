@@ -1,6 +1,6 @@
-package encrypt;
+package kz.epam.translator.encrypt;
 
-import choice.Choice;
+import kz.epam.translator.choice.Choice;
 
 import java.io.IOException;
 
@@ -33,7 +33,7 @@ public class RomanAlphabetForEncryption {
     }
 
     void fileWritToFolder(String string){
-        try(java.io.FileWriter fileWriter = new java.io.FileWriter("C://Users//ergaz//IdeaProjects//Translator//src//text//RomanTextInMorze.txt")){
+        try(java.io.FileWriter fileWriter = new java.io.FileWriter("C://Users//ergaz//IdeaProjects//Translator//src//kz//epam//translator//text//RomanTextInMorze.txt")){
             fileWriter.write(string);
         }catch (IOException ex){
             System.out.println(ex.getMessage());

@@ -1,6 +1,6 @@
-package encrypt;
+package kz.epam.translator.encrypt;
 
-import choice.Choice;
+import kz.epam.translator.choice.Choice;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -34,7 +34,7 @@ public class CyrillicAlphabetForEncryption {
         choice.choice();
     }
     void fileWritToFolder(String string){
-        try(FileWriter fileWriter =new FileWriter("C://Users//ergaz//IdeaProjects//Translator//src//text//CyrillicTextInMorze.txt")){
+        try(FileWriter fileWriter =new FileWriter("C://Users//ergaz//IdeaProjects//Translator//src//kz//epam//translator//text//CyrillicTextInMorze.txt")){
             fileWriter.write(string);
         }catch (IOException ex){
             System.out.println(ex.getMessage());

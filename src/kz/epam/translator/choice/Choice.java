@@ -1,4 +1,4 @@
-package choice;
+package kz.epam.translator.choice;
 
 import java.util.Scanner;
 

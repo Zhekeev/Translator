@@ -1,6 +1,6 @@
-package runner;
+package kz.epam.translator.runner;
 
-import choice.Choice;
+import kz.epam.translator.choice.Choice;
 
 public class Runner {
 
