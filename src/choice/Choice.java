@@ -9,7 +9,8 @@ public class Choice {
     public void choice(){
         System.out.print("Выберите функцию: ");
         System.out.print(" 1. Шифровать");
-        System.out.println(" 2. Дешифровать ");
+        System.out.print(" 2. Дешифровать ");
+        System.out.println("3. Закрыть");
         choiceNumber = keyboard.nextInt();
         switch (choiceNumber){
             case 1:
@@ -20,6 +21,8 @@ public class Choice {
                ChoiceForDecrypt choiceForDecrypt = new ChoiceForDecrypt();
                choiceForDecrypt.decrypt();
                break;
+            case 3:
+                System.exit(0);
             default:
                 Choice runner = new Choice();
                 System.out.println("Ошибочка, повторите выбор");

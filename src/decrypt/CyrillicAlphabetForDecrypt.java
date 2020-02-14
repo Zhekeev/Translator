@@ -1,5 +1,7 @@
 package decrypt;
 
+import choice.Choice;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,6 +17,7 @@ public class CyrillicAlphabetForDecrypt {
             "..-.","....","-.-.","---.","----","--.-","-..-","-..-","-.--","..-..","..--",".-.-",".----",
             "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
             "-----","--..--", ".-.-.-", "..--.."};
+    private Choice choice = new Choice();
 
     public String decryptionFromMorzeToCyrillic(String sentence) {
         String str = "";
@@ -28,6 +31,7 @@ public class CyrillicAlphabetForDecrypt {
         }
         System.out.println("Ваше слово ");
         System.out.println(str);
+        choice.choice();
         return str;
     }
 

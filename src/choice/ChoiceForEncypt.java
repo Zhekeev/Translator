@@ -8,8 +8,6 @@ import java.util.Scanner;
 public class ChoiceForEncypt {
 
     private Scanner keyboard  = new Scanner(System.in);
-    private String userInput;
-    private Scanner scannerForEncryptMethod = new Scanner(System.in);
     private RomanAlphabetForEncryption romanAlphabet = new RomanAlphabetForEncryption();
     private CyrillicAlphabetForEncryption cyrillicAlphabet = new CyrillicAlphabetForEncryption();
 
@@ -18,22 +16,27 @@ public class ChoiceForEncypt {
         System.out.print(" 1. Латиница");
         System.out.println(" 2. Кирилица");
         int choiceNumber = keyboard.nextInt();
+        String userInputText = textProcessing();
         switch (choiceNumber){
             case 1:
-                System.out.println("Введите слово");
-                userInput=scannerForEncryptMethod.nextLine().toLowerCase();
-                romanAlphabet.encryptionToMorzeInRoman(userInput);
+                romanAlphabet.encryptionToMorzeInRoman(userInputText);
                 break;
             case 2:
-                System.out.println("Введите слово");
-                userInput = scannerForEncryptMethod.nextLine().toLowerCase();
-                cyrillicAlphabet.encryptionToMorzeInCyrillic(userInput);
+                cyrillicAlphabet.encryptionToMorzeInCyrillic(userInputText);
                 break;
             default:
                 System.out.println("Ошибочка, повторите выбор");
                 ChoiceForEncypt choiceForEncypt = new ChoiceForEncypt();
                 choiceForEncypt.encrypt();
         }
-        keyboard.close();
     }
+
+    public String textProcessing(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите слово");
+        String userInput = scanner.nextLine().toLowerCase();
+        return userInput;
+    }
+
 }
+

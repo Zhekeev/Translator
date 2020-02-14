@@ -1,5 +1,7 @@
 package encrypt;
 
+import choice.Choice;
+
 import java.io.IOException;
 
 public class RomanAlphabetForEncryption {
@@ -13,6 +15,8 @@ public class RomanAlphabetForEncryption {
             "...", "-", "..-", "...-", ".--", " -..-", "-.--", "--..", ".----",
             "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
             "-----", "--..--", ".-.-.-", "..--.." };
+    private Choice choice = new Choice();
+
     public void encryptionToMorzeInRoman(String userInput){
         String str = "";
         char[] chars = userInput.toCharArray();
@@ -25,6 +29,7 @@ public class RomanAlphabetForEncryption {
         }
         System.out.println(str);
         fileWritToFolder(str);
+        choice.choice();
     }
 
     void fileWritToFolder(String string){

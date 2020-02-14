@@ -1,5 +1,7 @@
 package encrypt;
 
+import choice.Choice;
+
 import java.io.IOException;
 import java.io.FileWriter;
 
@@ -14,6 +16,7 @@ public class CyrillicAlphabetForEncryption {
             "..-.","....","-.-.","---.","----","--.-","-..-","-..-","-.--","..-..","..--",".-.-",".----",
             "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
             "-----","--..--", ".-.-.-", "..--.."};
+    private Choice choice = new Choice();
 
     public void encryptionToMorzeInCyrillic(String userInput){
         String str = "";
@@ -28,6 +31,7 @@ public class CyrillicAlphabetForEncryption {
         }
         System.out.println(str);
         fileWritToFolder(str);
+        choice.choice();
     }
     void fileWritToFolder(String string){
         try(FileWriter fileWriter =new FileWriter("C://Users//ergaz//IdeaProjects//Translator//src//text//CyrillicTextInMorze.txt")){
