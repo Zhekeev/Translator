@@ -7,6 +7,7 @@ public class Choice {
     private int choiceNumber;
     private final static int encryptChoiceNumber = 1;
     private final static int decryptChoiceNumber = 2;
+
     public void choice(){
         System.out.print("Выберите функцию: ");
         System.out.print(" 1. Шифровать");
