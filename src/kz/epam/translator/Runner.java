@@ -1,4 +1,4 @@
-package kz.epam.translator.runner;
+package kz.epam.translator;
 
 import kz.epam.translator.choice.Choice;
 
