@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class CyrillicAlphabetForDecrypt {
+    private Choice choice = new Choice();
+
     private final char [] russian ={'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м',
             'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ',  'ь',
             'ы', 'э', 'ю', 'я','1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
@@ -17,7 +19,6 @@ public class CyrillicAlphabetForDecrypt {
             "..-.","....","-.-.","---.","----","--.-","-..-","-..-","-.--","..-..","..--",".-.-",".----",
             "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
             "-----","--..--", ".-.-.-", "..--.."};
-    private Choice choice = new Choice();
 
     public String decryptionFromMorzeToCyrillic(String sentence) {
         String str = "";
@@ -37,7 +38,7 @@ public class CyrillicAlphabetForDecrypt {
 
     public void fileReadFromFolder(){
         try {
-            String text = Files.readString(Paths.get("C://Users//ergaz//IdeaProjects//Translator//src//kz//epam//translator//text//CyrillicTextInMorze.txt"));
+            String text = Files.readString(Paths.get("CyrillicTextInMorse.txt"));
             System.out.println(text);
             decryptionFromMorzeToCyrillic(text);
         } catch (IOException e) {

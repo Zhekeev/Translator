@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class RomanAlphabetForDecrypt {
+    private Choice choice = new Choice();
+
     private final char[] roman = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
             'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
             'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
@@ -17,7 +19,6 @@ public class RomanAlphabetForDecrypt {
             "...", "-", "..-", "...-", ".--", " -..-", "-.--", "--..", ".----",
             "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
             "-----", "--..--", ".-.-.-", "..--.." };
-    private Choice choice = new Choice();
 
     private String decryptionFromMorzeToRoman(String sentence) {
         String str = "";
@@ -37,7 +38,7 @@ public class RomanAlphabetForDecrypt {
 
     public void fileReadFromFolder(){
         try {
-            String text = Files.readString(Paths.get("C://Users//ergaz//IdeaProjects//Translator//src//kz//epam//translator//text//RomanTextInMorze.txt"));
+            String text = Files.readString(Paths.get("RomanTextInMorse.txt"));
             System.out.println(text);
             decryptionFromMorzeToRoman(text);
         } catch (IOException e) {

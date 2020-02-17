@@ -4,25 +4,23 @@ import java.util.Scanner;
 
 public class Choice {
     private Scanner keyboard = new Scanner(System.in);
-    public int choiceNumber;
-
+    private int choiceNumber;
+    private final static int encryptChoiceNumber = 1;
+    private final static int decryptChoiceNumber = 2;
     public void choice(){
         System.out.print("Выберите функцию: ");
         System.out.print(" 1. Шифровать");
-        System.out.print(" 2. Дешифровать ");
-        System.out.println("3. Закрыть");
+        System.out.println(" 2. Дешифровать ");
         choiceNumber = keyboard.nextInt();
         switch (choiceNumber){
-            case 1:
+            case encryptChoiceNumber:
                 ChoiceForEncypt choiceForEncypt = new ChoiceForEncypt();
                 choiceForEncypt.encrypt();
                 break;
-            case 2:
+            case decryptChoiceNumber:
                ChoiceForDecrypt choiceForDecrypt = new ChoiceForDecrypt();
                choiceForDecrypt.decrypt();
                break;
-            case 3:
-                System.exit(0);
             default:
                 Choice runner = new Choice();
                 System.out.println("Ошибочка, повторите выбор");

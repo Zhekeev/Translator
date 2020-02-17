@@ -10,19 +10,22 @@ public class ChoiceForEncypt {
     private Scanner keyboard  = new Scanner(System.in);
     private RomanAlphabetForEncryption romanAlphabet = new RomanAlphabetForEncryption();
     private CyrillicAlphabetForEncryption cyrillicAlphabet = new CyrillicAlphabetForEncryption();
+    private final static int romanChoiceNumber = 1;
+    private final static int cyrrilicChoiceNumber = 2;
 
     public void encrypt() {
         System.out.print("На Латинице или Кириллице? ");
         System.out.print(" 1. Латиница");
         System.out.println(" 2. Кирилица");
         int choiceNumber = keyboard.nextInt();
-        String userInputText = textProcessing();
         switch (choiceNumber){
-            case 1:
-                romanAlphabet.encryptionToMorzeInRoman(userInputText);
+            case romanChoiceNumber:
+                String userInputTextRoman = textProcessing();
+                romanAlphabet.encryptionToMorzeInRoman(userInputTextRoman);
                 break;
-            case 2:
-                cyrillicAlphabet.encryptionToMorzeInCyrillic(userInputText);
+            case cyrrilicChoiceNumber:
+                String userInputTextCyrrilic = textProcessing();
+                cyrillicAlphabet.encryptionToMorzeInCyrillic(userInputTextCyrrilic);
                 break;
             default:
                 System.out.println("Ошибочка, повторите выбор");
@@ -37,6 +40,5 @@ public class ChoiceForEncypt {
         String userInput = scanner.nextLine().toLowerCase();
         return userInput;
     }
-
 }
 
