@@ -1,17 +1,17 @@
 package kz.epam.translator.choice;
 
-import kz.epam.translator.encrypt.CyrillicAlphabetForEncryption;
-import kz.epam.translator.encrypt.RomanAlphabetForEncryption;
+import kz.epam.translator.encrypt.CyrillicEncryption;
+import kz.epam.translator.encrypt.RomanEncryption;
 
 import java.util.Scanner;
 
 public class ChoiceForEncypt {
 
     private Scanner keyboard  = new Scanner(System.in);
-    private RomanAlphabetForEncryption romanAlphabet = new RomanAlphabetForEncryption();
-    private CyrillicAlphabetForEncryption cyrillicAlphabet = new CyrillicAlphabetForEncryption();
-    private final static int romanChoiceNumber = 1;
-    private final static int cyrrilicChoiceNumber = 2;
+    private RomanEncryption romanAlphabet = new RomanEncryption();
+    private CyrillicEncryption cyrillicAlphabet = new CyrillicEncryption();
+    private final static int ROMAN_NUMBER = 1;
+    private final static int CYRILLIC_NUMBER = 2;
 
     public void encrypt() {
         System.out.print("На Латинице или Кириллице? ");
@@ -19,18 +19,16 @@ public class ChoiceForEncypt {
         System.out.println(" 2. Кирилица");
         int choiceNumber = keyboard.nextInt();
         switch (choiceNumber){
-            case romanChoiceNumber:
+            case ROMAN_NUMBER:
                 String userInputTextRoman = textProcessing();
-                romanAlphabet.encryptionToMorzeInRoman(userInputTextRoman);
+                romanAlphabet.encryptionToMorseInRoman(userInputTextRoman);
                 break;
-            case cyrrilicChoiceNumber:
+            case CYRILLIC_NUMBER:
                 String userInputTextCyrrilic = textProcessing();
-                cyrillicAlphabet.encryptionToMorzeInCyrillic(userInputTextCyrrilic);
+                cyrillicAlphabet.encryptionToMorseInCyrillic(userInputTextCyrrilic);
                 break;
             default:
-                System.out.println("Ошибочка, повторите выбор");
-                ChoiceForEncypt choiceForEncypt = new ChoiceForEncypt();
-                choiceForEncypt.encrypt();
+                throw new IllegalArgumentException("You were told to choose from two dumbass");
         }
     }
 

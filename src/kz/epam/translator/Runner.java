@@ -6,7 +6,6 @@ public class Runner {
     private static Choice choice = new Choice();
 
     public static void main(String[] args){
-
         choice.choice();
     }
 }
